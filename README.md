@@ -17,15 +17,15 @@ Mentor : Abinash Kumar Panda
 This project aims to develop a simple and efficient electric vehicle (EV) model in MATLAB Simulink using individual component models to analyze key performance parameters such as speed, SOC (State of Charge), and current under various drive cycles. The model allows for flexible adjustments to motor power, vehicle body properties (rolling resistance, air drag, and weight), and battery configurations to match real-world EV performance.
 
 ### **Key Activities**
-1.Model Development: Building an EV model in MATLAB Simulink using modular (individual) components.
+1. Model Development: Building an EV model in MATLAB Simulink using modular (individual) components.
 
-2.Performance Analysis: Analyzing speed, State of Charge (SoC), and current behavior during simulation. Evaluating the system response under various drive cycles (e.g., FTP-75, NEDC).
+2. Performance Analysis: Analyzing speed, State of Charge (SoC), and current behavior during simulation. Evaluating the system response under various drive cycles (e.g., FTP-75, NEDC).
 
-3.Parameter Customization: Tuning motor power, vehicle dynamics (rolling resistance, air drag, and weight). Modifying battery configuration (voltage, capacity, number of cells).
+3. Parameter Customization: Tuning motor power, vehicle dynamics (rolling resistance, air drag, and weight). Modifying battery configuration (voltage, capacity, number of cells).
 
-4.Drive Cycle Simulation: Running standard or custom drive cycles to assess real-world performance.
+4. Drive Cycle Simulation: Running standard or custom drive cycles to assess real-world performance.
 
-5.Real-world Performance Matching: Adjusting the model to reflect real EV behavior for practical insights or prototyping.
+5. Real-world Performance Matching: Adjusting the model to reflect real EV behavior for practical insights or prototyping.
 
 ### **Technologies Used**
 
