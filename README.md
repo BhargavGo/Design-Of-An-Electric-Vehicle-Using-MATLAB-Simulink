@@ -1,7 +1,7 @@
 
 Name: BHARGAV GORIVALE
 
-Company: E-Drive :  My Equation Education
+Company: My Equation Education
 
 Domain : E-Drive : A Industrial Training Program On EV’s and software simulation
 
@@ -14,7 +14,7 @@ Mentor : Abinash Kumar Panda
 ## **Project :  Design-Of-An-Electric-Vehicle-Using-MATLAB-Simulink**
 
 ### **Objective**
-The project interfaces a 4x4 matrix keypad with the STM32F407 Discovery Board, scanning rows and columns to detect key presses, without using the HAL library.
+This project aims to develop a simple and efficient electric vehicle (EV) model in MATLAB Simulink using individual component models to analyze key performance parameters such as speed, SOC (State of Charge), and current under various drive cycles. The model allows for flexible adjustments to motor power, vehicle body properties (rolling resistance, air drag, and weight), and battery configurations to match real-world EV performance.
 
 ### **Key Activities**
 1.Low-Level Register Manipulation:Configuring GPIO pins and reading input/output values using direct register access.
