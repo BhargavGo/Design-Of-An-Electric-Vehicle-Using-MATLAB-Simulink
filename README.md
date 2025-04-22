@@ -17,7 +17,7 @@ Mentor : Abinash Kumar Panda
 This project aims to develop a simple and efficient electric vehicle (EV) model in MATLAB Simulink using individual component models to analyze key performance parameters such as speed, SOC (State of Charge), and current under various drive cycles. The model allows for flexible adjustments to motor power, vehicle body properties (rolling resistance, air drag, and weight), and battery configurations to match real-world EV performance.
 
 ### **Key Activities**
-1.Low-Level Register Manipulation:Configuring GPIO pins and reading input/output values using direct register access.
+1.Model Development: Building an EV model in MATLAB Simulink using modular (individual) components.
 
 2.Row-Column Scanning: Sequentially activating rows and checking columns to detect which key is pressed.
 
