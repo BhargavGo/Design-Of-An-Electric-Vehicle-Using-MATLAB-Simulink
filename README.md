@@ -37,7 +37,7 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
   
 ### **Results :**
 
-1. Delay Function:
+1. EV Model Current Graph:
    - This delay function is used to create a small time interval (debouncing) when a keypress is detected. In mechanical keypads, bouncing can occur when a key is pressed, which can lead to multiple 
      false detections. The delay prevents that by adding a short pause.
    
@@ -91,47 +91,7 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
        
      - This prevents floating inputs when no button is pressed, ensuring stable high readings when no key is pressed.
        
-6. Keypad Scanning:
 
-     The keypad consists of rows (connected to PD0-PD3) and columns (connected to PD8-PD11). To detect which key is pressed, the program sequentially makes each row low and checks which column goes 
-     low. This corresponds to a specific key press.
-
-     a. Making All Rows High
-
-       *pOutPutDataReg |= 0x0f;
-
-     - This sets all rows (PD0-PD3) to a high state before starting the scan.
-
-     b. Scanning Each Row
-   
-      For each row, the program sets one of the row pins low and checks the state of the column pins.
-
-      Example for Row 1 (PD0):
-
-       *pOutPutDataReg &= ~(1 << 0);  // Set PD0 (R1) low
-
-      - Row 1 (PD0) is set low while the other rows remain high.
-        
-      - Then, it checks each column to see if it has gone low, indicating a key press.
-
-     c. Checking Columns:
-
-       if (!(*pInPutDataReg & (1 << 8))) {
-           delay();
-           printf("1\n");
-       }
-   
-      - The program checks if column C1 (PD8) is low.
-        
-      - If PD8 is low, key 1 (which corresponds to Row 1 and Column 1) is pressed. A short delay is added to debounce, and the result is printed.
-        
-     d. Repeating for Other Rows:
-   
-      - After scanning Row 1, the program sets Row 2 (PD1) low and repeats the process for columns, and so on for Row 3 (PD2) and Row 4 (PD3).
-
-7. Debouncing:
-   
-      - The delay() function is called after each detection to ensure that mechanical bouncing of the keypad doesn't cause false detections.
 
 
 ### **Keypad Layout Corresponding to the Program:**
