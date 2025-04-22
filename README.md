@@ -19,9 +19,13 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
 ### **Key Activities**
 1.Model Development: Building an EV model in MATLAB Simulink using modular (individual) components.
 
-2.Row-Column Scanning: Sequentially activating rows and checking columns to detect which key is pressed.
+2.Performance Analysis:Analyzing speed, State of Charge (SoC), and current behavior during simulation. Evaluating the system response under various drive cycles (e.g., FTP-75, NEDC).
 
-3.Debouncing:Implemented with a simple delay to prevent multiple detections from one keypress.
+3.Parameter Customization:Tuning motor power, vehicle dynamics (rolling resistance, air drag, and weight). Modifying battery configuration (voltage, capacity, number of cells).
+
+4.Drive Cycle Simulation: Running standard or custom drive cycles to assess real-world performance.
+
+5.Real-world Performance Matching: Adjusting the model to reflect real EV behavior for practical insights or prototyping.
 
 ### **Technologies Used**
 
