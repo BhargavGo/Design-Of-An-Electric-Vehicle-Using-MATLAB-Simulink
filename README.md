@@ -1,17 +1,17 @@
-# Design-Of-An-Electric-Vehicle-Using-MATLAB-Simulink
+
 Name: BHARGAV GORIVALE
 
-Company: FastBit Embedded Brain Academy
+Company: E-Drive :  My Equation Education
 
-Domain : Embedded Systems
+Domain : E-Drive : A Industrial Training Program On EV’s and software simulation
 
-Duration : Sept 2024
+Duration : Feb 2025
 
-Mentor : Kiran Nayak
+Mentor : Abinash Kumar Panda
 
 # **Overview of the Project**
 
-## **Project :  Keypad Interfacing With STM32F407 Discovery-Kit**
+## **Project :  Design-Of-An-Electric-Vehicle-Using-MATLAB-Simulink**
 
 ### **Objective**
 The project interfaces a 4x4 matrix keypad with the STM32F407 Discovery Board, scanning rows and columns to detect key presses, without using the HAL library.
