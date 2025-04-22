@@ -38,12 +38,8 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
 ### **Results :**
 
 1. EV Model Current Graph:
-   - This delay function is used to create a small time interval (debouncing) when a keypress is detected. In mechanical keypads, bouncing can occur when a key is pressed, which can lead to multiple 
-     false detections. The delay prevents that by adding a short pause.
-   
-            void delay(void) {
-             for (uint32_t i = 0; i < 300000; i++);
-            }
+   ![EV_MODEL_Current_GRAPH](https://github.com/user-attachments/assets/b6392ac1-7a82-4e01-bd24-9584c1652690)
+
 
    
 2. Key Detection:
