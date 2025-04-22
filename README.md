@@ -35,7 +35,7 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
     - Component libraries (Simscape, Simscape Electrical).
       
   
-### **Programming Details :**
+### **Results :**
 
 1. Delay Function:
    - This delay function is used to create a small time interval (debouncing) when a keypress is detected. In mechanical keypads, bouncing can occur when a key is pressed, which can lead to multiple 
