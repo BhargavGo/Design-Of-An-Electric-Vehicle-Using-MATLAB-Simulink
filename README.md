@@ -37,58 +37,28 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
   
 ### **Results :**
 
-1. EV Model Current Graph:
+1. EV Model Subsystem :
+   ![EV_MODEL_SUBSYSTEM](https://github.com/user-attachments/assets/9a719266-35a8-40dd-bfa9-638b97450040)
+
+   
+2. EV Model Current Graph:
    ![EV_MODEL_Current_GRAPH](https://github.com/user-attachments/assets/b6392ac1-7a82-4e01-bd24-9584c1652690)
 
+             
+      
+3. EV Model SoC Graph:
+   ![EV_MODEL_SoC_GRAPH](https://github.com/user-attachments/assets/e6b7023f-9e88-4c8a-a5a2-bc2ce6936d49)
+   
+    
+
+4. EV Model Speed Graph :
+   ![EV_MODEL_SPEED_GRAPH](https://github.com/user-attachments/assets/17479119-9a4f-4809-a110-897db1eac5f9)
+
 
    
-2. Key Detection:
-    - The program uses specific addresses to directly interact with the STM32 GPIO registers. These addresses are defined in the code as follows:
 
-             uint32_t volatile *const pGPIODModeReg  = (uint32_t*)(0x40020C00);     // GPIO Mode Register
-             uint32_t volatile *const pInPutDataReg  = (uint32_t*)(0x40020C00 + 0x10); // GPIO Input Data Register
-             uint32_t volatile *const pOutPutDataReg = (uint32_t*)(0x40020C00 + 0x14); // GPIO Output Data Register
-             uint32_t volatile *const pClockCtrlReg  = (uint32_t*)(0x40023800 + 0x30); // Clock Control Register
-             uint32_t volatile *const pPullupDownReg = (uint32_t*)(0x40020C00 + 0x0C); // Pull-up/Pull-down Register
 
-    - These registers control the configuration and behavior of the GPIO pins for Port D on the STM32F407. The base address for GPIOD is 0x40020C00.
-      
-3. Clock Signal:
-   
-    - Before interacting with GPIO pins, the peripheral clock for GPIOD must be enabled.
-
-            *pClockCtrlReg |= (1 << 3);
-
-4. GPIO Pin Configuration :
-
-   a. Configuring PD0-PD3 as Output (Rows)
-
-        *pGPIODModeReg &= ~(0xFF); // Clear mode bits for PD0-PD3
-        *pGPIODModeReg |= 0x55;   // Set PD0-PD3 as output (01 for each pin)
-
-    - The GPIO mode register configures the behavior of each pin.
-      
-    - &= ~(0xFF) clears the mode bits for pins PD0 to PD3.
-      
-    - |= 0x55 sets these pins as outputs by configuring 2 bits for each pin as 01 (which corresponds to output mode in STM32).
-
-   b. Configuring PD8-PD11 as Input (Columns)
-
-        *pGPIODModeReg &= ~(0xFF << 16);
-   
-     - The same mode register is modified to configure PD8-PD11 as input pins by clearing their mode bits. No need to set them, as the reset value for these bits corresponds to input mode (00).
-
-5. Pull-up Resistors for Columns:
-
-       *pPullupDownReg &= ~(0xFF << 16);  // Clear
-       *pPullupDownReg |=  (0x55 << 16);  // Enable pull-up resistors for PD8-PD11
-
-     - The Pull-up/Pull-down register enables internal pull-up resistors for the input pins PD8-PD11.
-       
-     - This prevents floating inputs when no button is pressed, ensuring stable high readings when no key is pressed.
        
 
 
 
-### **Keypad Layout Corresponding to the Program:**
-![KeypadInterfacing](https://github.com/user-attachments/assets/9f43bada-9755-48a8-b3ac-e141686fe3cd)
