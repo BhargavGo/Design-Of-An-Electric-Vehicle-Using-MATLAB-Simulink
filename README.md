@@ -29,8 +29,10 @@ This project aims to develop a simple and efficient electric vehicle (EV) model 
 
 ### **Technologies Used**
 
-1. Embedded C:
-    - Low-level programming for register control.
+1. MATLAB Simulink:
+    - For system modeling, simulation, and visualization.
+
+    - Component libraries (Simscape, Simscape Electrical).
       
 2. STM32F407 Discovery Board:
     - ARM Cortex-M4-based microcontroller.
